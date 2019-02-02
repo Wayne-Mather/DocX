@@ -340,7 +340,7 @@ namespace Xceed.Words.NET
       // Create the main document part for this package
       var word_styles = package.CreatePart( new Uri( "/word/styles.xml", UriKind.Relative ), "application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml", CompressionOption.Maximum );
 
-      stylesDoc = HelperFunctions.DecompressXMLResource( "Xceed.Words.NET.Resources.default_styles.xml.gz" );
+      stylesDoc = HelperFunctions.DecompressXMLResource( XceedResources.Style );
       var lang = stylesDoc.Root.Element( XName.Get( "docDefaults", DocX.w.NamespaceName ) ).Element( XName.Get( "rPrDefault", DocX.w.NamespaceName ) ).Element( XName.Get( "rPr", DocX.w.NamespaceName ) ).Element( XName.Get( "lang", DocX.w.NamespaceName ) );
       lang.SetAttributeValue( XName.Get( "val", DocX.w.NamespaceName ), CultureInfo.CurrentCulture );
 
@@ -616,7 +616,7 @@ namespace Xceed.Words.NET
       XDocument numberingDoc;
 
       var numberingPart = package.CreatePart(new Uri("/word/numbering.xml", UriKind.Relative), "application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml", CompressionOption.Maximum);
-      numberingDoc = DecompressXMLResource("Xceed.Words.NET.Resources.numbering.xml.gz");
+      numberingDoc = DecompressXMLResource(XceedResources.Numbering);
 
       using( TextWriter tw = new StreamWriter( new PackagePartStream( numberingPart.GetStream( FileMode.Create, FileAccess.Write ) ) ) )
       {

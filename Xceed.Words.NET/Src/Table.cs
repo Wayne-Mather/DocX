@@ -728,7 +728,7 @@ namespace Xceed.Words.NET
 
         if( tableStyle == null )
         {
-          XDocument external_style_doc = HelperFunctions.DecompressXMLResource( "Xceed.Words.NET.Resources.styles.xml.gz" );
+          XDocument external_style_doc = HelperFunctions.DecompressXMLResource( XceedResources.Style );
 
           var styleElement =
           (

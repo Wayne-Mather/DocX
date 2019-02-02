@@ -110,7 +110,7 @@ namespace Xceed.Words.NET
         switchString += " " + s.EnumDescription();
         if( s == TableOfContentsSwitches.O )
         {
-          switchString += string.Format( " '{0}-{1}'", 1, lastIncludeLevel );
+          switchString += string.Format( " \"{0}-{1}\"", 1, lastIncludeLevel );
         }
       }
 

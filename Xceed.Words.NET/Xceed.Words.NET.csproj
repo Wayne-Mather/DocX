@@ -113,6 +113,7 @@
     <Compile Include="Src\PageLayout.cs" />
     <Compile Include="Src\Section.cs" />
     <Compile Include="Src\TableOfContents.cs" />
+    <Compile Include="Src\XceedResources.cs" />
     <Compile Include="Src\_BaseClasses.cs" />
     <Compile Include="Src\Table.cs" />
     <Compile Include="Src\_Enumerations.cs" />
@@ -127,7 +128,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\default_styles.xml.gz" />
     <EmbeddedResource Include="Resources\styles.xml.gz" />
   </ItemGroup>
   <ItemGroup>
